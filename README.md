@@ -1,115 +1,58 @@
-# Path of the Unbound
-
-**A survival escape thriller built with Unity.** You are a fugitive. The Inquisition is hunting you. The forest does not care which of you catches you first.
-
-> 中文版说明见文末 → [中文说明](#中文说明)
-
----
-
-## 🎮 About the Game
-
-*Path of the Unbound* is a single-player, narrative-driven survival game. You wake in a hostile forest as a runaway — hunted by the Inquisition's hounds, pursuers, and an elite squad that closes in the longer you linger. Every step drains your body and your mind. You must decide: which wound to treat, which voice to ignore, how long you can keep running.
-
-Every journey is different. Your survival depends on the cards you draw, the choices you make, and how far you let your body and sanity decay before they give out.
-
-## ✨ Key Features
-
-- **Four vital stats to juggle** — Health, Stamina (STA), Sanity (SAN), and Satiety (SAT). Let any one of them collapse and the forest wins.
-- **Pursuit system** — an ever-tightening net. Hounds bark in the distance, torches move through the trees, and if your Pursuit Level maxes out, an elite squad surrounds you.
-- **Card-driven event system** — travel events are drawn from card pools (common cards plus distinct Stage 1 and Stage 2 pools), each with branching consequences, costs, and outcomes.
-- **Buffs & Debuffs** — bleeding, poison, hunger, wounds that refuse to heal, and whispers that erode your sanity. Manage them or die carrying them.
-- **Two stages, one forest** — from the dark woods to the Misty Lake, the environment (and the danger) evolves as you progress.
-- **Multiple endings** — how you die (or escape) depends on how you played.
-- **Rich atmospheric presentation** — dynamic status warnings, card hover effects, crossfading BGM, and a heartbeat that quickens when the hounds are near.
-
-## 🕹️ Core Systems
-
-| System | Description |
-| --- | --- |
-| **Health** | Your physical condition. Wounds, poison, and starvation chip away at it. |
-| **Stamina (STA)** | The fuel for action. Many cards cost stamina — insufficient STA blocks the choice. |
-| **Sanity (SAN)** | Your mental state. Fear, isolation, and whispers erode it. At zero, you break. |
-| **Satiety (SAT)** | Hunger management. Starving accelerates every other decline. |
-| **Pursuit Level** | How close the Inquisition is. Grows over time; some events let you evade it. |
-| **Card Events** | Draw from Common / Stage 1 / Stage 2 pools (CSV-driven). Each card changes your stats, statuses, or the pursuit. |
-| **Status Effects** | Persistent buffs/debuffs (e.g. bleeding, toxin, starvation, breakdown) tracked in the status panel. |
-
-## 🗺️ Stages & Endings
-
-- **Stage 1** — the deep forest. Learn to survive while the hounds find your scent.
-- **Stage 2** — the Misty Lake region. The terrain opens up, but so does the hunt.
-
-The end is rarely clean: lose your way and the forest takes you; get caught and the Inquisition claims you; lose your mind and you end it yourself.
-
-## 🛠️ Tech Stack
-
-- **Engine:** Unity 6 (6000.3.6f1)
-- **Pipeline:** Universal Render Pipeline (URP)
-- **Language:** C# (custom assemblies: GameManager, CardManager, CardEvent, PlayerStatus, AudioManager, HintSystem, MainMenuUI, etc.)
-- **UI:** UGUI + TextMeshPro (rich-text event narration)
-- **Input:** Unity Input System
-- **Graphics API:** DirectX 12
-- **Data:** CSV-driven card pools (`CommonCards.csv`, `Stage1Cards.csv`, `Stage2Cards.csv`)
-
-## 💻 System Requirements
-
-- **OS:** Windows 10/11 (64-bit)
-- **Graphics:** DirectX 12 capable GPU
-- **Storage:** ~160 MB free space
-
-## 🚀 How to Run
-
-1. Download the repository and extract the ZIP (or clone it).
-2. Run **`Path_of_the_Unbound.exe`**.
-3. No installation required.
-
-### Controls
-
-| Input | Action |
-| --- | --- |
-| Mouse wheel | Zoom camera |
-| Shift + Right Mouse Button | Control camera |
-| Click | Select / play cards |
-
-## 📁 Project Structure
-
-```
-Path_of_the_Unbound/
-├── Path_of_the_Unbound.exe          # Main executable
-├── UnityPlayer.dll                  # Unity runtime
-├── UnityCrashHandler64.exe          # Crash handler
-├── D3D12/                           # DirectX 12 core
-├── MonoBleedingEdge/                # Mono runtime
-└── Path_of_the_Unbound_Data/        # Game data, assemblies & assets
-    ├── Managed/                     # .NET assemblies (incl. Assembly-CSharp.dll)
-    ├── Resources/                   # Built-in Unity resources
-    ├── level0                       # Main scene data
-    └── *.assets                     # Serialized assets (cards, UI, audio)
-```
-
-## 📝 Notes
-
-- This repository contains the **compiled Windows build** of the game (not the Unity source project).
-- The in-game narrative text is in English.
-
----
-
-## 中文说明
-
 # 无缚之路（Path of the Unbound）
 
-一款基于 **Unity 6** 开发的单人生存逃亡叙事游戏。你是审判所追捕的逃犯，必须在黑暗的森林中活下去——猎犬在远处低吠，火把在树丛间移动，追捕的网越收越紧。
+> **一款由 Unity 6 打造的单人生存逃亡叙事游戏。**
+> 你是逃犯。审判所在追捕你。森林并不在乎谁先抓住你。
 
-### 核心玩法
+[简体中文](README.md) | [English](README_EN.md)
 
-- **四项生存属性**：生命（Health）、体力（STA）、理智（SAN）、饱食（SAT），任何一项崩溃都会导致失败。
-- **追捕系统**：追捕等级随时间上升，部分事件可以摆脱追捕；追捕拉满时精锐小队将包围你。
-- **卡牌事件系统**：旅行事件从卡池抽取（通用卡 + 第一幕/第二幕独立卡池，由 CSV 配置），每张卡都带来不同的代价与后果。
-- **增益与减益**：流血、中毒、饥饿、无法愈合的伤口、侵蚀理智的低语……你需要管理它们，或带着它们死去。
-- **两个阶段**：从幽暗森林到雾湖，随着推进环境与危险都会升级。
-- **多种结局**：迷失森林化为尘土、被审判所捕获、或理智崩坏自我了断——结局取决于你的选择。
+---
 
-### 操作
+## 🎮 游戏简介
+
+《无缚之路》是一款单人的、由叙事驱动的生存游戏。你作为一名逃犯，在充满敌意的森林中醒来——审判所的猎犬、追捕者，以及一支越拖越久的精锐小队，都在向你逼近。每迈出一步都在消耗你的身体与心智。你必须做出抉择：治疗哪道伤口、无视哪个声音、还能坚持奔跑多久。
+
+每一局旅程都不相同。你的生存取决于你抽到的卡牌、做出的选择，以及你的身体与理智在彻底崩溃前还能撑多远。
+
+## ✨ 核心特色
+
+- **四项生存属性相互牵制** —— 生命（Health）、体力（STA）、理智（SAN）、饱食（SAT）。任何一项崩溃，森林就会获胜。
+- **追捕系统** —— 一张越收越紧的网。猎犬在远处低吠，火把在树丛间移动；当追捕等级达到上限，精锐小队将包围你。
+- **卡牌事件系统** —— 旅行事件从卡池中抽取（通用卡池 + 第一幕 / 第二幕独立卡池），每张卡都带有分支后果、代价与结局。
+- **增益与减益** —— 流血、中毒、饥饿、无法愈合的伤口、侵蚀理智的低语……你要么管理它们，要么带着它们死去。
+- **两个阶段，同一片森林** —— 从幽暗林地到雾湖（Misty Lake），随着推进，环境与危险都在升级。
+- **多种结局** —— 你如何死去（或逃脱），取决于你如何游玩。
+- **沉浸式氛围表现** —— 动态状态警告、卡牌悬停特效、背景音乐淡入淡出，以及猎犬逼近时加速的心跳声。
+
+## 🕹️ 核心系统
+
+| 系统 | 说明 |
+| --- | --- |
+| **生命（Health）** | 你的身体状态。伤口、中毒与饥饿会不断侵蚀它。 |
+| **体力（STA）** | 行动的燃料。许多卡牌需要消耗体力——体力不足将无法选择该选项。 |
+| **理智（SAN）** | 你的精神状态。恐惧、孤独与低语会侵蚀它；归零时你将崩溃。 |
+| **饱食（SAT）** | 饥饿管理。长期挨饿会加速其他所有属性的衰减。 |
+| **追捕等级（Pursuit Level）** | 审判所的逼近程度。随时间增长，部分事件可以让你摆脱追捕。 |
+| **卡牌事件** | 从通用 / 第一幕 / 第二幕卡池抽取（由 CSV 驱动）。每张卡都会改变你的属性、状态或追捕局势。 |
+| **状态效果（Status Effects）** | 持续的增益/减益（如流血、毒素、饥饿、崩溃等），在状态面板中实时追踪。 |
+
+### 状态与警示
+
+游戏会在状态面板中实时显示当前生效的增益与减益；当属性逼近危险阈值时，会以红色警示提示：`低（Low）`、`高危险（High Danger）`、`饥饿（Starving）`、`濒死（Dying）`、`崩溃（Breakdown）`。
+
+事件中的状态变化通常以明确的动作标记呈现，例如：
+
+- `Bless: Gain [……]` —— 获得增益
+- `Warn: Add [……]` —— 附加减益
+- `Cure: Rmv [……]` —— 移除负面状态
+
+## 🗺️ 关卡与结局
+
+- **第一幕（Stage 1）** —— 幽暗森林。在猎犬嗅到你的气息之前，学会活下去。
+- **第二幕（Stage 2）** —— 雾湖（Misty Lake）地带。地形逐渐开阔，追捕也随之升级。
+
+结局很少体面：迷失方向，森林会将你化为尘土；被俘，审判所会处置你；失去心智，你将亲手了结自己。
+
+## 🖥️ 操作方式
 
 | 输入 | 动作 |
 | --- | --- |
@@ -117,8 +60,60 @@ Path_of_the_Unbound/
 | Shift + 鼠标右键 | 控制镜头 |
 | 单击 | 选择 / 打出卡牌 |
 
-### 运行方式
+## 🛠️ 技术栈
 
-下载仓库 ZIP 并解压后，直接运行 `Path_of_the_Unbound.exe`，无需安装。
+| 类别 | 技术 |
+| --- | --- |
+| 引擎 | Unity 6（6000.3.6f1） |
+| 渲染管线 | 通用渲染管线（URP） |
+| 语言 | C#（自定义程序集：GameManager、CardManager、CardEvent、PlayerStatus、AudioManager、HintSystem、MainMenuUI 等） |
+| UI | UGUI + TextMeshPro（富文本事件叙事） |
+| 输入 | Unity 新输入系统（Input System） |
+| 图形 API | DirectX 12 |
+| 数据 | CSV 驱动的卡池（`CommonCards.csv`、`Stage1Cards.csv`、`Stage2Cards.csv`） |
 
-> 本仓库包含的是游戏**编译后的 Windows 构建**（非 Unity 源码工程）。
+## 💻 系统要求
+
+- **操作系统**：Windows 10 / 11（64 位）
+- **显卡**：支持 DirectX 12 的 GPU
+- **存储空间**：约 160 MB 可用空间
+
+## 🚀 下载与运行
+
+1. 下载本仓库 ZIP 并解压（或直接 `git clone`）。
+2. 运行 **`Path_of_the_Unbound.exe`**。
+3. 无需安装。
+
+## 📁 项目结构
+
+```
+Path_of_the_Unbound/
+├── Path_of_the_Unbound.exe          # 主程序
+├── UnityPlayer.dll                  # Unity 运行时
+├── UnityCrashHandler64.exe          # 崩溃处理器
+├── D3D12/                           # DirectX 12 核心
+├── MonoBleedingEdge/                # Mono 运行时
+└── Path_of_the_Unbound_Data/        # 游戏数据、程序集与资源
+    ├── Managed/                     # .NET 程序集（含 Assembly-CSharp.dll）
+    ├── Resources/                   # Unity 内置资源
+    ├── level0                       # 主场景数据
+    └── *.assets                     # 序列化资源（卡牌、UI、音频等）
+```
+
+## 🔧 开发信息
+
+- 本仓库包含的是游戏**编译后的 Windows 构建**（非 Unity 源码工程）；自定义游戏逻辑编译于 `Assembly-CSharp.dll` 中。
+- 卡池数据由 CSV 配置（`CommonCards.csv` / `Stage1Cards.csv` / `Stage2Cards.csv`），如需调整事件内容，可在 Unity 工程中编辑后重新构建。
+- 游戏内叙事文本为英文；后续版本计划补充多语言支持。
+
+## ❓ 常见问题
+
+**Q：为什么仓库里只有构建文件，没有源码？**
+A：本仓库当前仅托管可直接游玩的 Windows 构建版本，Unity 源码工程未包含在内。
+
+**Q：卡牌内容可以自定义吗？**
+A：可以。事件卡由 CSV 数据驱动，在 Unity 工程中修改卡池 CSV 并重新构建即可。
+
+---
+
+*Path of the Unbound —— 挣脱束缚之路。*
